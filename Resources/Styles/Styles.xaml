@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Resources.Styles"
+                    >
+
+    
+    <OnPlatform x:Key="CustomFontFamily" x:TypeArguments="x:String">
+        <On Platform="UWP" Value="Assets/Fonts/CustomFont.ttf#CustomFont" />
+    </OnPlatform>
+
+
+    <FontImageSource x:Key="fis" 
+                             Glyph="&#xe907;"
+                             FontFamily="{ DynamicResource CustomFontFamily }"
+                             Size="26"
+                             Color="Black"
+                             />
+
+
+    <Style x:Key="st_AbortButton" TargetType="Button">
+        <Setter Property="ImageSource" Value="{StaticResource fis}"/>
+    </Style>
+
+    
+</ResourceDictionary>
